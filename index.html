@@ -14,6 +14,8 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- STMP -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -31,6 +33,8 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects"><i style="font-size: 24px;"  class="fa-solid fa-gear"></i></a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificate"><i style="font-size: 24px;"  class="fa-solid fa-certificate"></i></a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests"><i style="font-size: 24px;"  class="fa-solid fa-brain"></i></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contactme"><i style="font-size: 24px;"  class="fa-solid fa-message"></i></a></li>
+
                 </ul>
             </div>
         </nav>
@@ -71,7 +75,7 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">QOYOD ACCOUNTING PROGRAM</h3>
                             <div class="subheading mb-3">Training Web Developer</div>
-                            <p>In Qoyod I pick up many things. Also, the atmosphere there makes me ambitious to success. there I learn how to be a full-stack developer. I worked with PHP and MySQL with HTML, CSS, and Javascript.</p>
+                            <p>In Qoyod I pick up many things. Also, the atmosphere there makes me ambitious to succeed. there I learn how to be a full-stack developer. I worked with PHP and MySQL with HTML, CSS, and Javascript.</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">February 2016 - April 2016</span></div>
                     </div>
@@ -243,11 +247,73 @@
                     <p>I enjoy most of my time being with my laptop. I'm trying to learn new things such as quantum physics and machine learning, I think it will be the future someday AI is common more and more these days also the quantum computer will be the next step..</p>
                 </div>
             </section>
+            <section class="resume-section" id="contactme">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Contact me</h2>
+                    <form id="contact_me">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12">
+                                <div class="form__group field">
+                                    <input type="text" class="form__field" placeholder="NAME" name="name" id='name' required />
+                                    <label for="name" class="form__label">NAME</label>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form__group field">
+                                    <input type="email" class="form__field" placeholder="EMAIL" name="email" id='email' required />
+                                    <label for="EMAIL" class="form__label">EMAIL</label>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form__group field">
+                                    <input type="text" class="form__field" placeholder="SUBJECT" name="subject" id='subject' required />
+                                    <label for="SUBJECT" class="form__label">SUBJECT</label>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form__group field">
+                                    <textarea name="message" class="form__field" rows="10" placeholder="MESSAGE"  form="usrform" name="message" id='message'></textarea>
+                                    <label for="message" class="form__label">MESSAGE</label>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form__group field">
+                                <input class="button" type="submit" value="SEND">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
             <hr class="m-0" />
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- STMP -->
+        <script>
+            var submit = document.getElementById("contact_me")
+            submit.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var subject = document.getElementById('subject').value;
+                var message = document.getElementById('message').value;
+                var body = 'name: ' + name + '<br />' + 'email: ' + email + '<br />' + 'subject: ' + subject + '<br />' + 'message: ' + message
+
+                console.log("test");
+                Email.send({
+                SecureToken : "e13fb74d-c87c-4140-bedf-71111d8d78a4",
+                To : 'm.alziyad911@gmail.com',
+                From : email,
+                Subject : subject,
+                Body : body
+            }).then(
+            message => alert(message)
+            );
+            })
+        </script>
     </body>
 </html>
