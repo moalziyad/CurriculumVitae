@@ -11044,7 +11044,7 @@ input:focus, textarea:focus {
   border-image: linear-gradient(to right, #bbb,#eee);
   border-image-slice: 1;
 }
-/* reset input */
+
 .form__field{
   &:required,&:invalid { box-shadow:none; }
 }
