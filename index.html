@@ -310,7 +310,7 @@
                 var body = 'name: ' + name + '<br />' + 'email: ' + email + '<br />' + 'subject: ' + subject + '<br />' + 'message: ' + messages;
                 Email.send({
                     SecureToken : "e13fb74d-c87c-4140-bedf-71111d8d78a4",
-                    To : 'm.alziyad911@gmail.com',
+                    To : 'joker.89x@outlook.com',
                     From : 'm.alziyad911@gmail.com',
                     Subject : subject,
                     Body : body
@@ -318,6 +318,11 @@
                     message => {
                         if (message === 'OK') {
                             Toasty.showToast('Success', "The message was sent successfully", '<i class="fa-solid fa-check"></i>', 10000);
+                            // Make everything empty 
+                            document.getElementById('name').value = "";
+                            document.getElementById('email').value = "";
+                            document.getElementById('subject').value = "";
+                            document.getElementById('message').value = "";
                         } else {
                             Toasty.showToast('Notification', message, '<i class="fas fa-exclamation-circle"></i>', 10000);
                         }
