@@ -10839,7 +10839,7 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 17rem;
+    padding-left: 3rem;
   }
 }
 h1, .h1,
@@ -10870,7 +10870,10 @@ p.lead {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
+  color:#eee;
 }
+
+
 
 #sideNav {
   padding-left: 1rem;
@@ -10896,6 +10899,7 @@ p.lead {
     left: 0;
     display: flex;
     flex-direction: column;
+    background-color: var(--bs-body-bg) !important;
     width: 60px;
     height: 100vh;
   }
@@ -10971,7 +10975,7 @@ section.resume-section .resume-section-content {
 }
 @media (min-width: 992px) {
   section.resume-section {
-    padding-left: 3rem;
+    padding-left: 17rem;
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
