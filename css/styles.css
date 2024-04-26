@@ -11045,9 +11045,7 @@ input:focus, textarea:focus {
   border-image-slice: 1;
 }
 
-.form__field{
-  &:required,&:invalid { box-shadow:none; }
-}
+
 
 .button {
   background-color: transparent;
