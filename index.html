@@ -43,12 +43,12 @@
             </div>
         </nav>
         <!-- Page Content-->
-        <div id="loading">
+        <div id="loading" style="display: none;">
             <div class="loader">
                 <div class="loader-icon"></div>
             </div>
         </div>
-        <div class="container-fluid p-0" id="main" style="display: none;">
+        <div class="container-fluid p-0" id="main">
             <!-- About-->
             <section class="resume-section" id="about" style="min-height: 986px;border: 1px solid #eee;">
                 <div class="background-container">
@@ -342,16 +342,6 @@
                     }
                 );
             })
-        </script>
-        <script>
-        window.onload = function(){
-            setTimeout(() => {  loading(); }, 1000);            
-        };
-
-        function loading() {
-            document.getElementById("loading").style.display = "none";
-            document.getElementById("main").style.display = "block";
-        }
         </script>
     </body>
 </html>
