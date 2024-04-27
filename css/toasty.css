@@ -6,6 +6,7 @@ Credits: Animista for animation
 Github: https://github.com/felconca/Toasty.git
 */
 #toastyBox {
+  z-index: 1000;
   position: fixed;
   top: 20px;
   right: 2%;
